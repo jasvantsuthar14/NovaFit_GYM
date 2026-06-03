@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaFit - Sign Up</title>
+    <link rel="stylesheet" href="css file/auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-left">
+            <a href="index.html" class="brand">NovaFit</a>
+        </div>
+        <ul class="nav-links nav-links-primary">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="membership.html">Membership</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html" class="login-btn">Log In</a>
+        </div>
+        <div class="nav-menu-overlay" aria-hidden="true">
+            <div class="nav-menu-panel">
+                <div class="nav-menu-header">
+                    <span class="menu-title">Menu</span>
+                    <label for="nav-toggle" class="nav-close">X</label>
+                </div>
+                <ul class="nav-links nav-links-overlay">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <section class="auth-card signup-card">
+            <div class="auth-heading">
+                <span class="eyebrow">Create account</span>
+                <h1>Get started</h1>
+                <p>Sign up to explore plans, book courses, and unlock your fitness membership today.</p>
+            </div>
+            <form class="auth-form" action="#" method="post">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" name="name" placeholder="Your full name" required>
+
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" name="email" placeholder="you@example.com" required>
+
+                <label for="signup-phone">Phone</label>
+                <input type="tel" id="signup-phone" name="phone" placeholder="+91 98765 43210">
+
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+
+                <button type="submit" class="button button-primary">Create Account</button>
+                <p class="auth-footer">Already registered? <a href="login.html">Log in</a></p>
+            </form>
+        </section>
+        <aside class="auth-panel-side">
+            <h2>New member benefits</h2>
+            <p>Join now and access the best training plans, expert support, and premium membership offers.</p>
+            <ul class="feature-list">
+                <li>Personalised membership plans</li>
+                <li>Priority booking</li>
+                <li>Course purchase access</li>
+            </ul>
+            <a href="membership.html" class="button button-outline">View Plans</a>
+        </aside>
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">NovaFit</a>
+                <p>Empowering your fitness journey with expert support, modern facilities, and a community that motivates.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="membership.html">Membership</a>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: hello@novafit.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+        <p class="footer-note">© 2026 NovaFit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
