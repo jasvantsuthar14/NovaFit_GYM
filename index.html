@@ -85,14 +85,44 @@
         </div>
     </section>
 
-
+    <section class="why-novafit" aria-label="Why choose NovaFit">
+        <div class="section-header">
+            <p class="section-label">Why choose</p>
+            <h3>NovaFit</h3>
+            <p class="section-subtitle">Train smarter with premium gear, expert trainers, and a results-driven experience built for every fitness goal.</p>
+        </div>
+        <div class="choices-grid">
+            <article class="choice-card">
+                <div class="choice-image">
+                    <img src="image/workout1.jpg" alt="Expert trainers at NovaFit">
+                </div>
+                <h4>Expert Trainers</h4>
+                <p>Personalized coaching and motivation from certified trainers who help you stay safe and push past plateaus.</p>
+            </article>
+            <article class="choice-card">
+                <div class="choice-image">
+                    <img src="image/workout2.jpg" alt="Modern equipment at NovaFit">
+                </div>
+                <h4>Premium Equipment</h4>
+                <p>Work out on modern machines and clean studio spaces designed for strength, cardio, and recovery sessions.</p>
+            </article>
+            <article class="choice-card">
+                <div class="choice-image">
+                    <img src="image/workout3.jpg" alt="Results-driven approach at NovaFit">
+                </div>
+                <h4>Results-Focused Plans</h4>
+                <p>Follow structured training and recovery programs that keep your progress visible and your goals within reach.</p>
+            </article>
+        </div>
+    </section>
 
 <section class="feedback-section" aria-label="Feedback Form">
         <div class="feedback-intro">
-            <h3>Send Us Your Feedback</h3>
-            <p>We value your opinion. Share your name, email, phone number, rating and a quick message so we can improve NovaFit.</p>
+            <h3>Send Feedback</h3>
+            <p>We value your opinion. Share a quick note so we can improve NovaFit.</p>
         </div>
-        <form class="feedback-form" action="#" method="post">
+        <div id="feedback-message" class="feedback-message" aria-live="polite"></div>
+        <form class="feedback-form" action="feedback-submit.php" method="post">
             <div class="form-row">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -128,6 +158,20 @@
         </form>
     </section>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const feedbackStatus = params.get('feedback');
+        const feedbackMessage = document.getElementById('feedback-message');
+        if (feedbackMessage && feedbackStatus) {
+            if (feedbackStatus === 'success') {
+                feedbackMessage.textContent = 'Thank you! Your feedback has been submitted.';
+                feedbackMessage.classList.add('feedback-message-success');
+            } else {
+                feedbackMessage.textContent = 'Please fill in all fields before submitting.';
+                feedbackMessage.classList.add('feedback-message-error');
+            }
+        }
+    </script>
     <footer class="site-footer" aria-label="Footer">
         <div class="footer-content">
             <div class="footer-brand">
