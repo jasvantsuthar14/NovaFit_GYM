@@ -385,6 +385,93 @@ body{
 	margin: 0;
 }
 
+.why-novafit{
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 12px 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.section-header{
+    max-width: 760px;
+    margin: 0 auto 32px;
+}
+
+.section-label{
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: #ffeb99;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.section-header h3{
+    font-size: clamp(38px, 4vw, 54px);
+    margin: 0 0 14px;
+}
+
+.section-subtitle{
+    font-size: 18px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.82);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.choices-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+
+.choice-card{
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 28px;
+    padding: 32px 24px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+}
+
+.choice-image{
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #fff;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+}
+
+.choice-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choice-card h4{
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+
+.choice-card p{
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.88);
+    margin: 0;
+}
+
 @media (max-width: 900px){
 	.benefits-grid{
 		gap: 18px;
@@ -392,10 +479,47 @@ body{
 	.benefit-card{
 		flex: 1 1 45%;
 	}
+	.choices-grid{
+		grid-template-columns: repeat(2, minmax(220px, 1fr));
+		gap: 22px;
+	}
 	.benefits-title{ font-size: 44px; }
 }
 
 @media (max-width: 720px){
+	.benefits-grid{
+		flex-direction: column;
+	}
+	.benefit-card{
+		flex: 1 1 100%;
+	}
+	.choices-grid{
+		grid-template-columns: 1fr;
+	}
+	.choice-card{
+		padding: 28px 20px;
+	}
+	.choice-image{
+		width: 150px;
+		height: 150px;
+		margin-bottom: 18px;
+	}
+	.choice-card h4{
+		font-size: 22px;
+	}
+	.benefits-title{ font-size: 40px; }
+}
+
+@media (max-width: 420px){
+	.benefits-title{ font-size: 34px; }
+	.benefit-card h4{ font-size: 26px; }
+	.choice-image{
+		width: 130px;
+		height: 130px;
+	}
+	.choice-card h4{ font-size: 20px; }
+	.choice-card p{ font-size: 15px; }
+}
 	.benefits-grid{
 		flex-direction: column;
 	}
@@ -416,12 +540,12 @@ body{
 }
 .feedback-section{
     max-width: 1100px;
-    margin: 0 auto 48px;
-    padding: 32px 28px;
+    margin: 0 auto 40px;
+    padding: 24px 24px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.14);
     border-radius: 24px;
-    box-shadow: 0 24px 50px rgba(0,0,0,0.35);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.28);
 }
 
 .feedback-intro{
@@ -533,6 +657,15 @@ body{
         font-size: 15px;
     }
 }
+
+    .feedback-section{
+        padding: 20px 18px;
+    }
+    .feedback-intro p{
+        font-size: 15px;
+    }
+}
+
 .hero{ display:block; width:100%; }
 .hero-img{
 	width:100%;
